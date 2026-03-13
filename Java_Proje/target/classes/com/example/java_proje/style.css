@@ -1,0 +1,119 @@
+/* 1. Arka Planın Kendisi */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif; /* Modern yazı tipi */
+}
+
+/* 2. O Meşhur Cam Efektli Kutu */
+.glass-card {
+    /* Hafif beyaz şeffaf zemin */
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+
+    /* Yuvarlak Köşeler */
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+
+    /* İnce Beyaz Çerçeve (Parlaklık hissi verir) */
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 1.5px;
+
+    /* Gölge (Derinlik katar) */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 20, 0, 0, 10);
+}
+
+/* 3. Yazı Kutuları (TextField) */
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-prompt-text-fill: gray;
+    -fx-padding: 10px;
+}
+
+/* Yazı kutusuna tıklayınca (Focus) */
+.text-field:focused {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 40, 85, 0.3), 5, 0, 0, 0);
+}
+
+/* 4. Giriş Butonu */
+.login-btn {
+    -fx-background-color: #002855; /* Marmara Laciverti */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.login-btn:hover {
+    -fx-background-color: #004080; /* Üstüne gelince açılan renk */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+}
+
+.login-btn:pressed {
+    -fx-background-color: #001a38; /* Tıklayınca koyulaşsın */
+}
+/* Sol Menü Arka Planı */
+.sidebar {
+    -fx-background-color: #002855; /* Marmara Mavisi */
+}
+
+/* Menüdeki Butonlar */
+.menu-btn {
+    -fx-background-color: transparent; /* Arkası şeffaf */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT; /* Yazı solda dursun */
+    -fx-padding: 10 0 10 20; /* İç boşluklar */
+    -fx-cursor: hand;
+}
+
+/* Butonun üstüne gelince */
+.menu-btn:hover {
+    -fx-background-color: #004080; /* Hafif açık mavi */
+    -fx-border-color: white;
+    -fx-border-width: 0 0 0 3; /* Solda beyaz çizgi çıkar */
+}
+/* Ders Kartları (White Card) Tasarımı */
+.white-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+    -fx-padding: 20px;
+}
+
+/* Tablo Başlıkları */
+.table-header {
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+    -fx-font-size: 13px;
+    -fx-padding: 5 0 5 0;
+    -fx-border-color: #eeeeee;
+    -fx-border-width: 0 0 1 0; /* Sadece alta çizgi */
+}
+
+
+/* --- TABLO DÜZENLEMELERİ --- */
+
+/* Hücre içindeki yazıları ve başlıkları ortala */
+.table-view .table-cell, .table-view .column-header .label {
+    -fx-alignment: CENTER;
+}
+
+/* Tablo başlığı rengi */
+.table-view .column-header-background {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #555;
+    -fx-font-weight: bold;
+}
+
+/* Seçili satır rengi (Marmara Mavisi) */
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #002855;
+    -fx-text-fill: white;
+}

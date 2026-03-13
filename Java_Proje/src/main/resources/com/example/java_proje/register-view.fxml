@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="850.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_proje.RegisterController">
+    <children>
+        <ImageView fitHeight="${rootPane.height}" fitWidth="${rootPane.width}" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@images/arka_plan.png" />
+            </image>
+            <effect>
+                <GaussianBlur radius="5.0" />
+            </effect>
+        </ImageView>
+
+        <StackPane prefHeight="650.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="380.0" styleClass="glass-card">
+                    <children>
+                        <VBox alignment="CENTER" layoutX="40.0" layoutY="30.0" prefWidth="300.0" spacing="15.0">
+                            <children>
+                                <Label text="Akademisyen Kayıt" textFill="#002855">
+                                    <font>
+                                        <Font name="Segoe UI Bold" size="24.0" />
+                                    </font>
+                                </Label>
+
+                                <ComboBox fx:id="titleComboBox" prefHeight="40.0" prefWidth="300.0" promptText="Unvan Seçiniz" styleClass="text-field" style="-fx-background-color: white;" />
+
+                                <TextField fx:id="firstNameField" prefHeight="40.0" promptText="Adınız" styleClass="text-field" />
+                                <TextField fx:id="lastNameField" prefHeight="40.0" promptText="Soyadınız" styleClass="text-field" />
+                                <TextField fx:id="emailField" prefHeight="40.0" promptText="Kurumsal E-posta" styleClass="text-field" />
+
+                                <PasswordField fx:id="passwordField" prefHeight="40.0" promptText="Şifre Belirle" styleClass="text-field" />
+                                <PasswordField fx:id="confirmPasswordField" prefHeight="40.0" promptText="Şifreyi Tekrar Gir" styleClass="text-field" />
+
+                                <Button fx:id="registerButton" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="40.0" prefWidth="300.0" styleClass="login-btn" text="Kayıt Ol" />
+
+                                <Button mnemonicParsing="false" onAction="#onBackToLoginClick" style="-fx-background-color: transparent; -fx-text-fill: #333333; -fx-underline: true; -fx-cursor: hand;" text="Giriş Ekranına Dön" />
+                            </children>
+                        </VBox>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
